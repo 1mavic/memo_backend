@@ -131,7 +131,7 @@ class __$$_PlayerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Player extends _Player with DiagnosticableTreeMixin {
+class _$_Player extends _Player {
   const _$_Player({required this.id, required this.user, this.score = 0})
       : super._();
 
@@ -152,18 +152,8 @@ class _$_Player extends _Player with DiagnosticableTreeMixin {
   final int score;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Player(id: $id, user: $user, score: $score)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Player'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('user', user))
-      ..add(DiagnosticsProperty('score', score));
   }
 
   @override

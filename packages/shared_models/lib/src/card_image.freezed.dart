@@ -108,7 +108,7 @@ class __$$_CardImageCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CardImage extends _CardImage with DiagnosticableTreeMixin {
+class _$_CardImage extends _CardImage {
   const _$_CardImage({required this.id, required this.imageUrl}) : super._();
 
   factory _$_CardImage.fromJson(Map<String, dynamic> json) =>
@@ -123,17 +123,8 @@ class _$_CardImage extends _CardImage with DiagnosticableTreeMixin {
   final String imageUrl;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'CardImage(id: $id, imageUrl: $imageUrl)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'CardImage'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('imageUrl', imageUrl));
   }
 
   @override

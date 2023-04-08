@@ -177,7 +177,7 @@ class __$$_GameCopyWithImpl<$Res> extends _$GameCopyWithImpl<$Res, _$_Game>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Game extends _Game with DiagnosticableTreeMixin {
+class _$_Game extends _Game {
   const _$_Game(
       {required this.id,
       required this.currentPlayer,
@@ -226,20 +226,8 @@ class _$_Game extends _Game with DiagnosticableTreeMixin {
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Game(id: $id, currentPlayer: $currentPlayer, players: $players, cardBackImage: $cardBackImage, cards: $cards)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Game'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('currentPlayer', currentPlayer))
-      ..add(DiagnosticsProperty('players', players))
-      ..add(DiagnosticsProperty('cardBackImage', cardBackImage))
-      ..add(DiagnosticsProperty('cards', cards));
   }
 
   @override

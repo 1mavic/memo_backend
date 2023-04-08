@@ -147,7 +147,7 @@ class __$$_GameFieldCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GameField extends _GameField with DiagnosticableTreeMixin {
+class _$_GameField extends _GameField {
   const _$_GameField(
       {required this.id,
       required this.value,
@@ -176,19 +176,8 @@ class _$_GameField extends _GameField with DiagnosticableTreeMixin {
   final FieldState state;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'GameField(id: $id, value: $value, image: $image, state: $state)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'GameField'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('value', value))
-      ..add(DiagnosticsProperty('image', image))
-      ..add(DiagnosticsProperty('state', state));
   }
 
   @override
